@@ -1,19 +1,11 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCF — Home</title>
 
-{% block title %}SCF — Home{% endblock %}
-
-{% block content %}
-  <div class="video-container">
-    <video autoplay muted loop playsinline poster="{{ url_for('static', filename='logo.png') }}">
-      <source src="{{ url_for('static', filename='homepage.mp4') }}" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-    <!-- Logo overlay -->
-    <div class="overlay">
-      <img src="{{ url_for('static', filename='logo.png') }}" alt="SCF Logo" class="logo">
-    </div>
-  </div>
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     html, body {
@@ -21,6 +13,7 @@
       margin: 0;
       padding: 0;
       overflow: hidden;
+      background-color: #f2efeb;
     }
 
     .video-container {
@@ -45,14 +38,47 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      z-index: 1;
     }
 
     .logo {
-      width: 600px; /* Adjust as needed */
+      max-width: 300px;
+      width: 80vw;
       height: auto;
-      filter: drop-shadow(0 0 10px rgba(0,0,0,0.5)); /* Optional shadow for contrast */
     }
   </style>
-{% endblock %}
+</head>
 
+<body class="text-white bg-cover bg-center bg-no-repeat h-screen w-screen">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-4 text-sm tracking-widest uppercase text-black z-10 bg-[#f2efeb]/70 backdrop-blur-md">
+    
+    <div class="text-base font-light">
+      <a href="index.html">Stella Fusaro</a>
+    </div>
+
+    <ul class="flex space-x-8 text-sm font-light">
+      <li><a href="about.html">About</a></li>
+      <li><a href="films.html">Films</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="coding.html">Coding</a></li>
+      <li><a href="radio.html">Radio</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- VIDEO BACKGROUND -->
+  <div class="video-container">
+    <video autoplay muted loop playsinline poster="static/logo.png">
+      <source src="static/homepage.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- LOGO OVERLAY -->
+    <div class="overlay">
+      <img src="static/logo.png" alt="SCF Logo" class="logo">
+    </div>
+  </div>
+
+</body>
+</html>
