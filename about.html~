@@ -34,9 +34,6 @@
     .about-overlay {
       position: relative;
       z-index: 1;
-      padding: 8rem 2rem 4rem 2rem;
-      font-family: sans-serif;
-      color: black;
     }
 
     .about-grid {
