@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}SCF — Home{% endblock %}
+
+{% block content %}
+  <div class="video-container">
+    <video autoplay muted loop playsinline poster="{{ url_for('static', filename='logo.png') }}">
+      <source src="{{ url_for('static', filename='homepage.mp4') }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Logo overlay -->
+    <div class="overlay">
+      <img src="{{ url_for('static', filename='logo.png') }}" alt="SCF Logo" class="logo">
+    </div>
+  </div>
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .video-container video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    .logo {
+      width: 600px; /* Adjust as needed */
+      height: auto;
+      filter: drop-shadow(0 0 10px rgba(0,0,0,0.5)); /* Optional shadow for contrast */
+    }
+  </style>
+{% endblock %}
+

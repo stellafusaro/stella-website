@@ -1,0 +1,30 @@
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/films')
+def films():
+    return render_template('films.html')
+
+@app.route('/videos')
+def videos():
+    return render_template('videos.html')
+
+@app.route('/coding')
+def coding():
+    return render_template('coding.html')
+
+@app.route('/radio')
+def radio():
+    return render_template('radio.html')
+if __name__ == '__main__':
+    app.run(debug=True)
+

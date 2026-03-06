@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}SCF{% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="text-white bg-cover bg-center bg-no-repeat h-screen w-screen" sty    le="background-color: #f2efeb">
+  <nav class ="fixed top-0 left-0 w-full flex justify-between items-center px-6 p    y-4 text-sm tracking-widest uppercase text-black z-10 bg-[#f2efeb]/70 backdrop    -blur-md">
+    <div class ="text-base font-light">
+    <div><a href="{{ url_for('home') }}">Stella Fusaro</a></div>
+    </div>
+    <ul class="flex space-x-8 text-sm font-light">
+      <li><a href="{{ url_for('about') }}">About</a></li>
+      <li><a href="{{ url_for('films') }}">Films</a></li>
+      <li><a href="{{ url_for('videos') }}">Videos</a></li>
+      <li><a href="{{ url_for('coding') }}">Coding</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>
+
