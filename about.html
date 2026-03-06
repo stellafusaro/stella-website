@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Stella Fusaro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      background-color: #f2efeb;
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .video-background video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .about-overlay {
+      position: relative;
+      z-index: 1;
+      padding: 8rem 2rem 4rem 2rem;
+      font-family: sans-serif;
+      color: black;
+    }
+
+    .about-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .about-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-image img {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      object-fit: cover;
+    }
+
+    .about-text {
+      font-size: 1rem;
+      line-height: 1.6;
+      max-width: 650px;
+    }
+
+    .about-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+    }
+
+    .about-text a {
+      text-decoration: underline;
+      color: #333;
+    }
+
+    .about-text a:hover {
+      color: black;
+    }
+
+    @media (min-width: 768px) {
+      .about-grid {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .about-image {
+        flex: 1;
+      }
+
+      .about-image img {
+        max-width: 100%;
+        max-height: 600px;
+        width: auto;
+      }
+
+      .about-text {
+        flex: 2;
+      }
+    }
+  </style>
+</head>
+
+<body class="text-white bg-cover bg-center bg-no-repeat w-screen" style="background-color: #f2efeb">
+
+  <nav class="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-4 text-sm tracking-widest uppercase text-black z-10 bg-[#f2efeb]/70 backdrop-blur-md">
+    <div class="text-base font-light">
+      <a href="index.html">Stella Fusaro</a>
+    </div>
+    <ul class="flex space-x-8 text-sm font-light">
+      <li><a href="about.html">About</a></li>
+      <li><a href="films.html">Films</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="coding.html">Coding</a></li>
+      <li><a href="radio.html">Radio</a></li>
+    </ul>
+  </nav>
+
+  <div class="video-background">
+    <video autoplay muted loop playsinline>
+      <source src="static/homepage.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <section class="about-overlay">
+    <div class="about-grid">
+      <div class="about-image">
+        <img src="static/stella.png" alt="Stella Fusaro">
+      </div>
+
+      <div class="about-text">
+        <h1>Stella Fusaro</h1>
+
+        <p>
+          Hi, I’m Stella — a filmmaker, designer, and computer science graduate based in New York. My work lives at the intersection of visual storytelling and technical precision. Whether I’m editing a short film, designing for impact, or building websites from scratch, I believe in creating work that is intentional, bold, and thoughtful.
+        </p>
+
+        <p>
+          I graduated from Columbia University with a degree in Computer Science, Math, and Film. My experience spans directing and editing short films, crafting creative video media for advertisements, and coding dynamic, responsive websites (like this one!).
+        </p>
+
+        <p>
+          I also program for WKCR-FM, where you can hear me on Wednesdays from 3–6pm hosting a show dedicated to film scores — with a focus on marginalized composers, including women and people of color. When I can, I also love curating classical music programming.
+        </p>
+
+        <p>
+          Outside of this work, I spend a lot of time in the ballet world — both dancing and watching. I’m a member of the Junior Council at the American Ballet Theatre, and I love choreographing pieces whenever I can. I also enjoy planning events, and I’m a certified bartender from the Columbia School of Mixology. Crafting cocktails is one of my favorite creative outlets.
+        </p>
+
+        <p>
+          Want to collaborate? <a href="mailto:stellacfusaro@gmail.com">Let’s talk.</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

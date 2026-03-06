@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCF — Home</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #f2efeb;
+    }
+
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .video-container video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .logo {
+      max-width: 300px;
+      width: 80vw;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body class="text-white bg-cover bg-center bg-no-repeat h-screen w-screen">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-4 text-sm tracking-widest uppercase text-black z-10 bg-[#f2efeb]/70 backdrop-blur-md">
+    
+    <div class="text-base font-light">
+      <a href="index.html">Stella Fusaro</a>
+    </div>
+
+    <ul class="flex space-x-8 text-sm font-light">
+      <li><a href="about.html">About</a></li>
+      <li><a href="films.html">Films</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="coding.html">Coding</a></li>
+      <li><a href="radio.html">Radio</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- VIDEO BACKGROUND -->
+  <div class="video-container">
+    <video autoplay muted loop playsinline poster="static/logo.png">
+      <source src="static/homepage.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- LOGO OVERLAY -->
+    <div class="overlay">
+      <img src="static/logo.png" alt="SCF Logo" class="logo">
+    </div>
+  </div>
+
+</body>
+</html>
