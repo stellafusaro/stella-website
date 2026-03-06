@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Films — Stella Fusaro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      background-color: #f2efeb;
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .video-background video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .films-overlay {
+      position: relative;
+      z-index: 1;
+      padding: 8rem 2rem 4rem 2rem;
+      font-family: sans-serif;
+      color: black;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .films-overlay h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      text-align: center;
+    }
+
+    .film-grid {
+      display: grid;
+      gap: 4rem;
+    }
+
+    .film iframe {
+      width: 100%;
+      max-width: 800px;
+      aspect-ratio: 16 / 9;
+      border-radius: 0.5rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      display: block;
+      margin: 0 auto 1rem auto;
+    }
+
+    .film h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .film h2 span {
+      font-weight: 300;
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .film p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body class="text-white bg-cover bg-center bg-no-repeat w-screen" style="background-color: #f2efeb">
+
+  <nav class="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-4 text-sm tracking-widest uppercase text-black z-10 bg-[#f2efeb]/70 backdrop-blur-md">
+    <div class="text-base font-light">
+      <a href="index.html">Stella Fusaro</a>
+    </div>
+    <ul class="flex space-x-8 text-sm font-light">
+      <li><a href="about.html">About</a></li>
+      <li><a href="films.html">Films</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="coding.html">Coding</a></li>
+      <li><a href="radio.html">Radio</a></li>
+    </ul>
+  </nav>
+
+  <div class="video-background">
+    <video autoplay muted loop playsinline>
+      <source src="static/homepage.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <section class="films-overlay">
+    <h1>Films</h1>
+
+    <div class="film-grid">
+
+      <div class="film">
+        <iframe src="https://www.youtube.com/embed/wYA8_FSWh24" frameborder="0" allowfullscreen loading="lazy"></iframe>
+        <h2>Goodbye, Scruffy <span>(May 2025)</span></h2>
+        <p>
+          Written, directed, and edited by me, this is one of my first narrative films with dialogue. It follows three women as they bury something—what exactly is left unsaid.
+        </p>
+      </div>
+
+      <div class="film">
+        <iframe src="https://www.youtube.com/embed/w7fDOgvNa1E" frameborder="0" allowfullscreen loading="lazy"></iframe>
+        <h2>In a Moment <span>(June 2023)</span></h2>
+        <p>
+          My very first film: a dance piece inspired by Maya Deren’s magical realism. Shot and edited in a single day, it explores a girl’s internal escape from the claustrophobic pressures of men’s voices through a dancer in her mind.
+        </p>
+      </div>
+
+      <div class="film">
+        <iframe src="https://www.youtube.com/embed/dc3vgOgp644" frameborder="0" allowfullscreen loading="lazy"></iframe>
+        <h2>Let the Children Burn the Bodies <span>(November 2023)</span></h2>
+        <p>
+          A creative documentary capturing Guy Fawkes Night in the English village of Crondal. Through a surreal lens, it reflects on the strange tradition of children burning effigies—an oddly normalized ritual.
+        </p>
+      </div>
+
+      <div class="film">
+        <iframe src="https://www.youtube.com/embed/GSTpirRci64" frameborder="0" allowfullscreen loading="lazy"></iframe>
+        <h2>Inclusus <span>(September 2024)</span></h2>
+        <p>
+          An experimental art film designed to disorient. Two girls find themselves trapped in an eerie, undefined space. Nothing is explained—and that’s the point.
+        </p>
+      </div>
+
+      <div class="film">
+        <iframe src="https://www.youtube.com/embed/P7iYCmtiJww" frameborder="0" allowfullscreen loading="lazy"></iframe>
+        <h2>Isolation: A Video Essay <span>(December 2024)</span></h2>
+        <p>
+          My first video essay, created entirely without narration or text. Through imagery alone, it explores themes of isolation in the work of filmmaker Melina León.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

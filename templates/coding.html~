@@ -19,7 +19,7 @@
   <div class="project-grid">
 
     <div class="project">
-      <h2>Dance NYC (in progress) <span>Android App — Java / Android Studio</span></h2>
+      <h2>Dance NYC<span> (in progress)</span> <span>Android App — Java / Android Studio</span></h2>
       <p>
         A mobile app designed to help users easily locate dance classes in NYC. I led the design and development using Java in Android Studio, with a focus on streamlined UI and real-time location filtering.
       </p>
